@@ -467,6 +467,12 @@ button:focus {
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
+.img-padding {
+  padding: 10px;
+  /* border-radius: 15px; */
+}
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -539,6 +545,61 @@ button:focus {
 }
 
 /* --------- */
+/* Project Section Pagination */
+/* --------- */
+.pagination {
+  background-color: transparent;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #c770f0;
+  border-color: #c770f0;
+  color: white;
+}
+
+.pagination .page-link {
+  color: #c770f0;
+  border: 1px solid #c770f0;
+  background-color: transparent;
+}
+
+.pagination .page-link:hover {
+  background-color: #c770f0;
+  color: white;
+  border-color: #c770f0;
+}
+
+/* Remove white border and background for disabled elements */
+.pagination .page-item.disabled .page-link {
+  background-color: transparent;
+  border-color: #c770f0;
+  color: #c770f0;
+}
+
+/* Ensure transparent background for Prev, Next, First, and Last */
+.pagination .page-item:not(.active) .page-link {
+  background-color: transparent;
+  border-color: #c770f0;
+}
+
+/* Add hover effect to Prev, Next, First, and Last */
+.pagination .page-item:not(.disabled) .page-link:hover {
+  background-color: #c770f0;
+  color: white;
+  border-color: #c770f0;
+}
+
+/* Remove focus outline */
+.pagination .page-link:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #c770f0;
+}
+
+/* --------- */
 /* About */
 /* --------- */
 
@@ -550,9 +611,18 @@ button:focus {
   color: white !important;
 }
 
-.tech-icons {
-  font-size: 4.5em !important;
+.tech-icons-container {
   margin: 15px !important;
+  padding-left: unset !important;
+  padding-right: unset !important;
+  /* padding-left: 0 !important;
+    padding-right: 0 !important; */
+}
+
+.tech-icons {
+  width: 100%;
+  font-size: 4.5em !important;
+  /* margin: 15px !important; */
   padding: 10px !important;
   opacity: 0.93 !important;
   border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
@@ -565,8 +635,16 @@ button:focus {
   transition: all 0.4s ease 0s !important;
 }
 
+.tech-icons-name {
+  margin: unset;
+  margin-top: 5px;
+}
+
 @media (max-width: 767px) {
-  .tech-icons {
+  /* .tech-icons {
+    margin: 10px !important;
+  } */
+  .tech-icons-container {
     margin: 10px !important;
   }
 }
@@ -740,4 +818,16 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* --------- */
+/* Blogs */
+/* --------- */
+
+.blog-section {
+  position: relative !important;
+  padding-top: 110px !important;
+  padding-bottom: 30px !important;
+  /* background-image: var(--section-background-color) !important; */
+  color: white !important;
 }
