@@ -17,6 +17,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FaWhatsapp } from "react-icons/fa"; // Importing the WhatsApp icon
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -54,6 +55,14 @@ function App() {
           </Routes>
         </div>
         <Footer />
+        <a
+          href="https://wa.me/919142901293"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="floating-whatsapp"
+        >
+          <FaWhatsapp className="floating-whatsapp-icon" />
+        </a>
       </div>
     </Router>
   );
