@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
@@ -6,37 +6,18 @@ import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-// import "./ProjectCards.css"; // Assuming you have a CSS file for the loader
 
 function ProjectCards(props) {
-  const [loaded, setLoaded] = useState(
-    Array(props.imgPaths.length).fill(false)
-  );
-
-  const handleImageLoad = (index) => {
-    setLoaded((prevLoaded) => {
-      const newLoaded = [...prevLoaded];
-      newLoaded[index] = true;
-      return newLoaded;
-    });
-  };
-
   return (
     <Card className="project-card-view">
       <Carousel>
         {props.imgPaths.map((imgPath, index) => (
           <Carousel.Item key={index}>
-            {!loaded[index] && (
-              <div className="image-placeholder">Loading...</div>
-            )}
             <LazyLoadImage
-              className={`d-block w-100 rounded img-padding ${
-                loaded[index] ? "" : "hidden"
-              }`}
+              className="d-block w-100 rounded img-padding"
               src={imgPath}
               alt={`slide-${index}`}
               effect="blur"
-              afterLoad={() => handleImageLoad(index)}
             />
           </Carousel.Item>
         ))}
@@ -108,6 +89,8 @@ function ProjectCards(props) {
         </Button>
         {"\n"}
         {"\n"}
+
+        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
 
         {!props.isBlog && props.demoLink && (
           <Button
