@@ -5,6 +5,7 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
   AiFillFacebook,
+  AiFillMail,
 } from "react-icons/ai";
 import { FaHeart, FaLinkedinIn } from "react-icons/fa";
 
@@ -28,6 +29,16 @@ function Footer() {
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="mailto:rahulkumar20010702@gmail.com"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillMail />
+              </a>
+            </li>
             <li className="social-icons">
               <a
                 href="https://github.com/kumar-rahul2001"

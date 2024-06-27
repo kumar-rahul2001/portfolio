@@ -7,6 +7,7 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
   AiFillFacebook,
+  AiFillMail,
 } from "react-icons/ai";
 import { FaFacebookF, FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
 // import { BsTwitterX } from "react-icons/bs";
@@ -64,6 +65,17 @@ function Home2() {
               Feel free to <span className="purple">connect </span>with me
             </p>
             <ul className="home-about-social-links">
+              <li className="social-icons">
+                <a
+                  href="mailto:rahulkumar20010702@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillMail />
+                </a>
+              </li>
+
               <li className="social-icons">
                 <a
                   href="https://github.com/kumar-rahul2001"
