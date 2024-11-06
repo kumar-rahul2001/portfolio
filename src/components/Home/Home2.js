@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
+import myPhoto from "../../Assets/myPhoto.jpg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -9,8 +10,8 @@ import {
   AiFillFacebook,
   AiFillMail,
 } from "react-icons/ai";
-import { FaFacebookF, FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
-// import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
+import Home3 from "./Home3";
 
 function Home2() {
   return (
@@ -54,9 +55,51 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              {/* <img src={myImg} className="img-fluid" alt="avatar" /> */}
+              <img
+                width="250px"
+                height="250px"
+                src={myPhoto}
+                className="img-fluid"
+                alt="avatar"
+                style={{ border: "5px solid #623686", borderRadius: "5px" }}
+              />
             </Tilt>
           </Col>
+          {/* <Col
+            md={4}
+            className="myAvtar"
+            style={{
+              position: "relative",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "250px",
+              height: "250px",
+              borderRadius: "50%",
+              backgroundColor: "green",
+              overflow: "hidden",
+            }}
+          >
+            <Tilt>
+              <img
+                width="250px"
+                height="250px"
+                src={myPhoto}
+                alt="avatar"
+                style={{
+                  position: "relative",
+                  // top: "15px", // Adjust upward position
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  mixBlendMode: "multiply",
+                }}
+              />
+            </Tilt>
+          </Col> */}
+        </Row>
+        <Row>
+          <Home3 />
         </Row>
         <Row>
           <Col md={12} className="home-about-social">

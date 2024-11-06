@@ -425,6 +425,7 @@ button:focus {
   display: inline-block !important;
   padding-right: 15px;
   padding-left: 15px;
+  margin: 15px 0;
 }
 
 .icon-colour {

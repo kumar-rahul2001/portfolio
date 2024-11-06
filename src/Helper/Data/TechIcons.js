@@ -10,7 +10,16 @@ import {
   DiJava,
   DiDjango,
 } from "react-icons/di";
-import { SiFirebase, SiNextdotjs, SiExpress, SiSqlite } from "react-icons/si";
+import {
+  SiFirebase,
+  SiNextdotjs,
+  SiExpress,
+  SiMysql,
+  SiSqlite,
+} from "react-icons/si";
+import { FaPhp } from "react-icons/fa";
+import { TbBrandLaravel } from "react-icons/tb";
+import { SiPostgresql } from "react-icons/si";
 
 const techIcons = [
   { icon: <CgCPlusPlus />, name: "C++" },
@@ -22,10 +31,14 @@ const techIcons = [
   { icon: <SiNextdotjs />, name: "Next.js" },
   { icon: <DiGit />, name: "Git" },
   { icon: <SiFirebase />, name: "Firebase" },
+  { icon: <SiMysql />, name: "MySQL" },
   { icon: <SiSqlite />, name: "SQLite" },
   { icon: <DiPython />, name: "Python" },
   { icon: <DiDjango />, name: "Django" },
   { icon: <DiJava />, name: "Java" },
+  { icon: <FaPhp />, name: "Php" },
+  { icon: <TbBrandLaravel />, name: "Laravel" },
+  { icon: <SiPostgresql />, name: "Postgtes SQL" },
 ];
 
 export default techIcons;

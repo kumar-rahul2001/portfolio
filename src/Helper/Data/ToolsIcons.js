@@ -12,6 +12,8 @@ import {
   SiAmazonaws,
   SiAzuredevops,
 } from "react-icons/si";
+import { FaLinux } from "react-icons/fa";
+import { BsUbuntu } from "react-icons/bs";
 
 const ToolsIcons = [
   { icon: <SiMacos />, name: "macOS" },
@@ -25,6 +27,8 @@ const ToolsIcons = [
   { icon: <SiAmazonaws />, name: "AWS" },
   { icon: <SiAzuredevops />, name: "Azure DevOps" },
   { icon: <SiSlack />, name: "Slack" },
+  { icon: <FaLinux />, name: "Linux" },
+  { icon: <BsUbuntu />, name: "Ubuntu" },
 ];
 
 export default ToolsIcons;

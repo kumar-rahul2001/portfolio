@@ -10,11 +10,11 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      <Carousel>
+      <Carousel style={{ height: "200px" }}>
         {props.imgPaths.map((imgPath, index) => (
           <Carousel.Item key={index}>
             <LazyLoadImage
-              className="d-block w-100 rounded img-padding"
+              className="d-block w-100 h-100 rounded img-padding"
               src={imgPath}
               alt={`slide-${index}`}
               effect="blur"
